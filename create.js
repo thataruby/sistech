@@ -1,21 +1,37 @@
+const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+const appendAlert = (message, type) => {
+  const wrapper = document.createElement('div')
+  wrapper.innerHTML = [
+    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+    `   <div>${message}</div>`,
+    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+    '</div>'
+  ].join('')
+
+  alertPlaceholder.append(wrapper)
+}
+
+const alertTrigger = document.getElementById('liveAlertBtn')
+if (alertTrigger) {
+  alertTrigger.addEventListener('click', () => {
+    appendAlert('You have submitted your blog!', 'success')
+  })
+}
+ 
 const form = document.getElementById("create-form")
 
-form.addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default from submission
+form.addEventListener('submit', 
+    function(event) {
+    event.preventDefault();
 
-    // retrieve form values
     const title = document.getElementById('title').value;
     const content = document.getElementById('content').value;
 
-    // perform processing or validation on the form values
     console.log('title:', title);
     console.log('content:', content);
 
-    // submit data
     submitData(title,content);
     
-   // form.reset();
-
 })
 
 function submitData(title, content) {

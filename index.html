@@ -10,21 +10,37 @@
 </head>
 <body>
     <div id="container" class="container-fluid">
-        <h1>Halaman Home</h1>
         <header class="d-flex justify-content-center py-3">
-            <ul class="nav nav-pills">
+            <ul class="nav nav-tabs">
                 <li class="nav-item">
                     <a href="./index.html" class="nav-link active" aria-current="page">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="./create.html" class="nav-link">Create</a>
+                    <a href="./create.html" class="nav-link">Post</a>
                 </li>
                 <li class="nav-item">
                     <a href="./aboutme.html" class="nav-link">About Me</a>
                 </li>
             </ul>
         </header>
-        <div class="row container-md gap-3" id="blog-list">
+        <div class="p-5 text-center bg-image" style="
+        background-image: url('images/bookheader.JPEG'); 
+        height: 200px; 
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        text-align:center;
+        margin:auto;
+        padding:0;">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="text-white fw-bold">
+                    <h1 class="mb-3">Thata's Book Blog</h1>
+                    <h4 class="mb-3">A place where I nerd out about books!</h4>
+                    <a class="btn btn-outline-light btn-md" href="https://www.goodreads.com/user/show/134844834-thata-ruby">My Goodreads</a>
+                </div>
+            </div>
+        </div>
+        <div class="row container-md gap-3 ms-2" id="blog-list">
            <div id="child-blog-list">
            </div>
         </div>

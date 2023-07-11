@@ -1,7 +1,7 @@
 
 getData();
 
-function  getData() {
+function getData() {
     var myHeaders = new Headers();
     myHeaders.append("Authorization", "Bearer fec7a9f4-3ec2-4039-ad21-07cafca8c4a5");
 
@@ -25,26 +25,15 @@ function  getData() {
 }
 
 function addDataToTable(blog) {
-    console.log(blog)
     var table = document.getElementById("child-blog-list")
-    var newRow = `
-    <tr>
-        <td>`+ blog.id +`</th>
-        <td>`+ blog.title +`</td>
-        <td>`+ blog.content +`</td>
-        <td>`+ blog.like +` <button class="btn btn-light" value="`+ blog.id +`" onClick="like(this.value)">👍</button></td>
-        <td>
-            <a href ="./edit.html?id=`+ blog.id +`&title=`+ blog.title+`&content=`+ blog.content +`">Edit</a>
-        </td>
-    </tr>
-    `
+
     var cardBlog = `
-    <div class="card col-4">
+    <div class="card col-4" style="width: 18rem;">
         <div class="card-body">
-        <h5 class="card-title">`+ blog.title +`</h5>
-        <p class="card-text">`+ blog.content + `</p>
-        <button class="btn btn-primary" value="`+ blog.id +`" onClick="like(this.value)">👍</button>
-        <a class="btn btn-primary" href ="./edit.html?id=`+ blog.id +`&title=`+ blog.title+`&content=`+ blog.content +`">Edit</a>
+            <h5 class="card-title">`+ blog.title +`</h5>
+            <p class="card-text">`+ blog.content + `</p>
+            <button class="btn btn-dark" value="`+ blog.id +`" onClick="like(this.value)">`+ blog.like +` 📚💗</button>
+            <a class="btn btn-dark" href ="./edit.html?id=`+ blog.id +`&title=`+ blog.title+`&content=`+ blog.content +`">Edit</a>
         </div>
     </div>
     `

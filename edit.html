@@ -10,14 +10,13 @@
 </head>
 <body>
     <div id="container" class="container-fluid">
-        <h1>Halaman Edit</h1>
         <header class="d-flex justify-content-center py-3">
-            <ul class="nav nav-pills">
+            <ul class="nav nav-tabs">
                 <li class="nav-item">
                     <a href="./index.html" class="nav-link" aria-current="page">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="./create.html" class="nav-link">Create</a>
+                    <a href="./create.html" class="nav-link">Post</a>
                 </li>
                 <li class="nav-item">
                     <a href="./aboutme.html" class="nav-link">About Me</a>
@@ -35,7 +34,8 @@
               <label for="content" class="form-label">Content</label>
               <textarea id="content" class="form-control" placeholder="Content Blog Masukkan Disini" rows="5"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div id="liveAlertPlaceholder"></div>
+            <button type="submit" class="btn btn-dark" id="liveAlertBtn">Submit</button>
           </form>
         </div>
     </div>
